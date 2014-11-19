@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <div class="panel panel-default">
+        Quizz {{ page }} page
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript">
+        window.quiz = {{ quiz|json_encode(constant('JSON_UNESCAPED_UNICODE'))|raw }};
+    </script>
+{% endblock %}

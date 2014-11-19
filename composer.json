@@ -29,7 +29,9 @@
 		"symfony/dom-crawler": "~2.5",
 		"symfony/filesystem": "~2.5",
 		"mheap/silex-assetic" : "~1.0",
-		"leafo/lessphp" : "~0.4.0"
+		"oyejorge/less.php" : "~1.7",
+        "natxet/CssMin": "dev-master",
+        "mrclay/minify": "dev-master"
 	},
 	"autoload": {
 		"psr-0": {

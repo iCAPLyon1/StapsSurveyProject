@@ -1,6 +1,7 @@
 /composer.lock
 /vendor/
-/composer.lock
 /web/assets/*
 /app/cache/*
 /app/log/*
+.idea/
+/bower_components/

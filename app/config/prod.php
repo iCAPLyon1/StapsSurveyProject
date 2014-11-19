@@ -39,9 +39,9 @@ $app['routes'] = $app->extend('routes', function (RouteCollection $routes, Appli
 // Assetic
 $app['assetic.enabled'] = true;
 $app['assetic.path_to_cache'] = $app['cache.path'] . '/assetic' ;
-$app['assetic.path_to_web'] = __DIR__ . '/../../web/assets';
-$app['assetic.input.path_to_assets'] = __DIR__ . '/../../src/StapsSurvey/Resources/assets';
-$app['assetic.input.path_to_css'] = $app['assetic.input.path_to_assets'] . '/less/';
+$app['assetic.path_to_web'] = __DIR__ . '/../../web';
+$app['path_to_assets'] = __DIR__ . '/../../src/StapsSurvey/Resources/assets';
+$app['assetic.input.path_to_css'] = $app['path_to_assets'] . '/less/';
 $app['assetic.output.path_to_css'] = 'css/';
-$app['assetic.input.path_to_js'] = $app['assetic.input.path_to_assets'] . '/app/';
+$app['assetic.input.path_to_js'] = $app['path_to_assets'] . '/app/';
 $app['assetic.output.path_to_js'] = 'js/';

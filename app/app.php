@@ -56,7 +56,7 @@ $app->register(new TwigServiceProvider(), array(
 }*/
 
 // Assetic filters
-if (isset($app['assetic.enabled']) && $app['assetic.enabled']) {
+if (isset($app['assetic.enabled']) && $app['assetic.enabled'] && false) {
 	$app->register(new AsseticServiceProvider(), array(
 		'assetic.options' => array(
 			'debug' => $app['debug'],
@@ -68,7 +68,7 @@ if (isset($app['assetic.enabled']) && $app['assetic.enabled']) {
 		$app->extend('assetic.filter_manager', function ($fm, $app) {
 			$fm->set('lessphp', new Assetic\Filter\LessphpFilter());
 			$fm->set('cssmin', new Assetic\Filter\CssMinFilter());
-			$fm->set('jsmin', new Assetic\Filter\JsMinFilter());
+			$fm->set('jsmin', new Assetic\Filter\JSMinFilter());
 		
 			return $fm;
 		})

@@ -1,0 +1,1450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <title>Test d'auto-évaluation</title>
+    <subQuiz>
+        <title>Niveau scolaire et de maîtrise d’outils fondamentaux</title>
+        <question>
+            <id>rs</id>
+            <title>Résultats scolaires</title>
+            <section>
+                <title>Résultats scolaires</title>
+                <subQuestion>
+                    <title>Notes en français au baccalauréat</title>
+                    <answer>
+                        <title>Moins de 8</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 8 et 10</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 11 et 13</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 13</title>
+                        <value>3</value>
+                    </answer>
+                </subQuestion>
+                <subQuestion>
+                    <title><![CDATA[Notes en SVT ou physique‐chimie en 1<sup>ère</sup>]]></title>
+                    <answer>
+                        <title>Moins de 8</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 8 et 10</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 11 et 13</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 13</title>
+                        <value>3</value>
+                    </answer>
+                </subQuestion>
+                <subQuestion filter="a,b">
+                    <title>Notes en philosophie en terminale</title>
+                    <answer>
+                        <title>Moins de 8</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 8 et 10</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 11 et 13</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 13</title>
+                        <value>3</value>
+                    </answer>
+                </subQuestion>
+                <subQuestion filter="a,b">
+                    <title>Notes en SVT ou physique‐chimie en terminale</title>
+                    <answer>
+                        <title>Moins de 8</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 8 et 10</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 11 et 13</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 13</title>
+                        <value>3</value>
+                    </answer>
+                </subQuestion>
+                <base>12</base>
+            </section>
+            <filter>
+                <title>Filières</title>
+                <option>
+                    <id>a</id>
+                    <coefficient>1.2</coefficient>
+                    <title>Bac S</title>
+                </option>
+                <option>
+                    <id>b</id>
+                    <coefficient>1</coefficient>
+                    <title>Bac ES ou L</title>
+                </option>
+                <option>
+                    <id>c</id>
+                    <coefficient>0.9</coefficient>
+                    <title>Bac STT ou STI</title>
+                </option>
+                <option>
+                    <id>d</id>
+                    <coefficient>0.8</coefficient>
+                    <title>Bac SM</title>
+                </option>
+                <option>
+                    <id>e</id>
+                    <coefficient>0.7</coefficient>
+                    <title>Bac Pro</title>
+                </option>
+            </filter>
+        </question>
+        <question>
+            <id>of</id>
+            <title>Outils fondamentaux</title>
+            <section>
+                <title>Compétences</title>
+                <subQuestion>
+                    <title>
+                        <![CDATA[Maîtrise de l’outil informatique <br/>(traitement de texte, tableur, Internet…)]]></title>
+                    <answer>
+                        <title>Aucune</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Je débute</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Bonne</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Excellente</title>
+                        <value>3</value>
+                    </answer>
+                </subQuestion>
+                <subQuestion>
+                    <title>Parlez‐vous une langue étrangère ?</title>
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Avec difficulté</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez bien</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Couramment</title>
+                        <value>3</value>
+                    </answer>
+                </subQuestion>
+                <subQuestion>
+                    <title>Savez‐vous prendre des notes de cours ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Assez mal</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez bien</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Bien</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Savez‐vous faire une fiche de lecture ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Assez mal</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez bien</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Bien</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Savez‐vous faire un plan détaillé ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Assez mal</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez bien</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Bien</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Savez‐vous faire un travail de synthèse ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Assez mal</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez bien</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Bien</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Etes‐vous capable de travailler seul ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Difficilement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez capable</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très capable</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Etes‐vous capable de travailler en groupe ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Difficilement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez capable</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très capable</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <base>24</base>
+            </section>
+        </question>
+    </subQuiz>
+    <subQuiz>
+        <title>Pratiques sportives</title>
+        <question>
+            <id>sp</id>
+            <title>Spécialité sportive</title>
+            <section filter="a,b">
+                <title>Activité physique artistique ou d’expression</title>
+
+                <subQuestion>
+                    <title>Heures d’entraînement hebdomadaire</title>
+
+                    <answer>
+                        <title>Moins de 3h</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 3 et 6h</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 6 et 9h</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 9h</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Nombre d’années de pratique</title>
+
+                    <answer>
+                        <title>Moins de 2 ans</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 2 et 4 ans</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 4 et 6 ans</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 6 ans</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+
+                <base>6</base>
+            </section>
+            <section filter="c,d">
+                <title>Activité sportive</title>
+
+                <subQuestion>
+                    <title>Pratiquez‐vous en compétition ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Parfois</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement (UNSS)</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement (Milieu Fédéral)</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Si oui, à quel niveau</title>
+
+                    <answer>
+                        <title>Départemental</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Régional</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>National</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>International</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Heures d’entraînement hebdomadaire</title>
+
+                    <answer>
+                        <title>Moins de 3h</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 3 et 6h</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 6 et 9h</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 9h</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Nombre d’années de pratique</title>
+
+                    <answer>
+                        <title>Moins de 2 ans</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 2 et 4 ans</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Entre 4 et 6 ans</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 6 ans</title>
+                        <value>3</value>
+                    </answer>
+                </subQuestion>
+                <base>12</base>
+            </section>
+            <filter>
+                <title>Spécialité</title>
+                <option>
+                    <id>a</id>
+                    <title>dance</title>
+                </option>
+                <option>
+                    <id>b</id>
+                    <title>cirque</title>
+                </option>
+                <option>
+                    <id>c</id>
+                    <title>athlétisme</title>
+                </option>
+                <option>
+                    <id>d</id>
+                    <title>sport collectif</title>
+                </option>
+            </filter>
+        </question>
+        <question>
+            <id>po</id>
+            <title>Polyvalence dans les autres activités sportives</title>
+            <section>
+                <title>Pratiques d’activités physiques autres que votre spécialité</title>
+                <subQuestion>
+                    <title>Sport collectif (football…)</title>
+                    <answer>
+                        <title>Jamais</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>3</value>
+                    </answer>
+                </subQuestion>
+                <subQuestion>
+                    <title>Sport de raquettes (tennis …)</title>
+
+                    <answer>
+                        <title>Jamais</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Sport de combat (judo …)</title>
+
+                    <answer>
+                        <title>Jamais</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Activités physiques de pleine nature (escalade…)</title>
+
+                    <answer>
+                        <title>Jamais</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Activités d’expression (danse, cirque…)</title>
+
+                    <answer>
+                        <title>Jamais</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Activités gymniques (gymnastique sportive, acrosport…)</title>
+
+                    <answer>
+                        <title>Jamais</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Natation (natation sportive)</title>
+
+                    <answer>
+                        <title>Jamais</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Athlétisme (saut en longueur…)</title>
+
+                    <answer>
+                        <title>Jamais</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Note en EPS au baccalauréat</title>
+
+                    <answer>
+                        <title>Moins de 10</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>De 10 à 12,5</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>De 12,5 à 15</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 15</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+
+                <base>27</base>
+            </section>
+        </question>
+
+    </subQuiz>
+    <subQuiz>
+        <title>Finalisation du projet et dispositions de base</title>
+        <question>
+            <id>mo</id>
+            <title>Motivation, projet et expérience d’encadrement</title>
+            <section>
+                <title>Qu’en est‐il de votre motivation et de votre projet professionnel ?</title>
+
+                <subQuestion>
+                    <title>Depuis combien de temps prévoyez‐vous d’entrer en STAPS ?</title>
+
+                    <answer>
+                        <title>Moins d’1 an</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>1 an</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>De 1 à 3 ans</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 3 ans</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous construit votre parcours scolaire en fonction de cela ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Connaissez‐vous les divers enseignements dispensés en STAPS ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Vaguement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez bien</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Parfaitement</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous pris de dispositions pour pallier vos points faibles ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>J'y songe</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Pour certains</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Activité Physique
+                        Adaptée et Santé ?
+                    </title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Vaguement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Précisément</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très précisément</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Education et Motricité
+                        ?
+                    </title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Vaguement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Précisément</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très précisément</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Vous êtes vous informés sur les objectifs et débouchés
+                        de la filière Entraînement Sportif ?
+                    </title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Vaguement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Précisément</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très précisément</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Vous êtes vous informés sur les objectifs et débouchés
+                        de la filière Management du Sport ?
+                    </title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Vaguement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Précisément</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très précisément</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous un projet professionnel précis ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+
+                <base>54</base>
+            </section>
+            <section>
+                <title>Expérience d’encadrement sportif</title>
+
+                <subQuestion>
+                    <title>Etes‐vous engagé dans une tâche d’animation sportive ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Si oui, depuis combien de temps ?</title>
+
+                    <answer>
+                        <title>Moins d’1 an</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>De 1 à 3 ans</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 3 ans</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Etes‐vous titulaire de diplômes d’animateur sportif ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Je songe à en passer un</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Diplôme en cours</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+
+                <base>54</base>
+            </section>
+            <section>
+                <title>Expériences d’encadrement autre que sportif</title>
+
+                <subQuestion>
+                    <title>Etes‐vous engagé dans une tâche d’animation autre que sportive ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Etes‐vous titulaire du BAFA ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Je songe à en passer un</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Diplôme en cours</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+
+                <base>54</base>
+            </section>
+            <section>
+                <title>Autres</title>
+
+                <subQuestion>
+                    <title>Etes‐vous titulaire du diplôme de secourisme (AFPS) ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Je songe à en passer un</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Diplôme en cours</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Etes‐vous titulaire du diplôme de surveillant de baignade ou du BNSSA ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Je songe à en passer un</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Diplôme en cours</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Pensez‐vous que vous aimeriez vous occuper d’enfants, d’adolescents, de personnes handicapées
+                        ou de personnes âgées et d’une manière plus générale, d’autrui ?
+                    </title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Oui</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+
+                <base>54</base>
+            </section>
+        </question>
+        <question>
+            <id>sc</id>
+            <title>Santé physique et Capacité de travail</title>
+            <section>
+                <title>Santé physique</title>
+
+                <subQuestion>
+                    <title>Vous qualifieriez votre santé de…</title>
+
+                    <answer>
+                        <title>Mauvaise</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Assez bonne</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Bonne</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Excellente</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous des problèmes respiratoires (asthme…) ?</title>
+
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Jamais</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous des problèmes de dos ?</title>
+
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Jamais</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous des problèmes articulaires (chevilles, genoux…) ?</title>
+
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Jamais</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous des problèmes musculaires ?</title>
+
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Jamais</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous des problèmes auditifs ou visuels ?</title>
+
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Jamais</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous des problèmes de voix ou d’élocution ?</title>
+
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Jamais</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+
+                <base>33</base>
+            </section>
+            <section>
+                <title>Capacité de travail</title>
+                <subQuestion>
+                    <title>Combien d’h par jour êtes‐vous capable de consacrer au travail scolaire en dehors des cours
+                        ?
+                    </title>
+
+                    <answer>
+                        <title>1h</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>2h</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>3h</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 3h</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Etes‐vous capable de vous concentrer longtemps sur une même tâche ?</title>
+
+                    <answer>
+                        <title>Pas du tout</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Un peu</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Etes‐vous capable de passer rapidement d’une tâche à une autre ?</title>
+
+                    <answer>
+                        <title>Pas du tout</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Un peu</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Apprenez‐vous rapidement, retenez‐vous bien ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Assez mal</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez bien</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Bien</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous besoin de récupérer longtemps après une pratique?</title>
+
+                    <answer>
+                        <title>Très</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Assez peu</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très peu</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Avez‐vous besoin de récupérer longtemps après une pratique sportive afin de pouvoir vous
+                        consacrer à votre travail scolaire ?
+                    </title>
+
+                    <answer>
+                        <title>Très longtemps</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Longtemps</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez peu de temps</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très peu de temps</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <base>33</base>
+            </section>
+        </question>
+        <question>
+            <id>aa</id>
+            <title>Activités autres que scolaires et sportives</title>
+            <section>
+                <title>Activités autres que scolaires et sportives</title>
+
+                <subQuestion>
+                    <title>Combien de livres lisez‐vous dans l’année ?</title>
+
+                    <answer>
+                        <title>De 0 à 2</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>De 3 à 5</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>De 5 à 10</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Plus de 10</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Jouez‐vous d’un instrument de musique ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Je songe à apprendre</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Je débute</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Pratiquez‐vous le dessin ou la peinture ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Je songe à m’y adonner</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Je débute</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Pratiquez‐vous la photographie ou la vidéo ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Je songe à m’y adonner</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Je débute</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Régulièrement</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Aimez‐vous voyager ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Modérément</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Beaucoup</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Suivez‐vous les actualités ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Peu</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Dans les grandes lignes</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Dans le détail</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+                <subQuestion>
+                    <title>Vous arrive‐t‐il d’aller voir des spectacles ?</title>
+
+                    <answer>
+                        <title>Non</title>
+                        <value>0</value>
+                    </answer>
+                    <answer>
+                        <title>Rarement</title>
+                        <value>1</value>
+                    </answer>
+                    <answer>
+                        <title>Assez souvent</title>
+                        <value>2</value>
+                    </answer>
+                    <answer>
+                        <title>Très souvent</title>
+                        <value>3</value>
+                    </answer>
+
+                </subQuestion>
+
+                <base>21</base>
+            </section>
+        </question>
+
+    </subQuiz>
+</quiz>

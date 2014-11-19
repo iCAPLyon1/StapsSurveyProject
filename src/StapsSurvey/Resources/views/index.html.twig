@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="jumbotron">
+                <h2 class="text-center">{{ 'Evaluation test'|trans }} </h2>
+                <h4 class="text-center">{{ 'Are you made to succeed in e-STAPS?'|trans }}</h4>
+                <div class="text-center">
+                    <a class="btn btn-primary" href="{{ path('survey',{'page':1}) }}">{{ 'Test yourself'|trans }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
