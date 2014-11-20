@@ -56,7 +56,7 @@ $app->register(new TwigServiceProvider(), array(
 }*/
 
 // Assetic filters
-if (isset($app['assetic.enabled']) && $app['assetic.enabled'] && false) {
+if (isset($app['assetic.enabled']) && $app['assetic.enabled']) {
 	$app->register(new AsseticServiceProvider(), array(
 		'assetic.options' => array(
 			'debug' => $app['debug'],

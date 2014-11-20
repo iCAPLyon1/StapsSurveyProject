@@ -1,46 +1,43 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="{{ app.request.local|default('fr') }}" data-ng-app="app" ng-strict-di>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ (title is defined)?title:'homepage'|trans }}</title>
+    <title data-ng-bind="title">{{ (title is defined)?title:'homepage'|trans }}</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width">
     {% block stylesheets %}
         {% stylesheets debug=false filter='lessphp, cssmin' output='/assets/css/bootstrap.css'
-            '../src/StapsSurvey/Resources/assets/less/bootstrap.less'
+        '../src/StapsSurvey/Resources/client/less/bootstrap.less'
         %}
             <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
         {% endstylesheets %}
         {% stylesheets debug=false filter='lessphp, cssmin' output='/assets/css/font-awesome.css'
-            '../bower_components/font-awesome/css/font-awesome.css'
+        '../bower_components/font-awesome/css/font-awesome.css'
         %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
         {% image debug=false output='/assets/font/FontAwesome.otf'
-            '../bower_components/font-awesome/font/FontAwesome.otf' %}
+        '../bower_components/font-awesome/font/FontAwesome.otf' %}
         {% endimage %}
         {% image debug=false output='/assets/font/fontawesome-webfont.eot'
-            '../bower_components/font-awesome/font/fontawesome-webfont.eot' %}
+        '../bower_components/font-awesome/font/fontawesome-webfont.eot' %}
         {% endimage %}
         {% image debug=false output='/assets/font/fontawesome-webfont.svg'
-            '../bower_components/font-awesome/font/fontawesome-webfont.svg' %}
+        '../bower_components/font-awesome/font/fontawesome-webfont.svg' %}
         {% endimage %}
         {% image debug=false output='/assets/font/fontawesome-webfont.ttf'
-            '../bower_components/font-awesome/font/fontawesome-webfont.ttf' %}
+        '../bower_components/font-awesome/font/fontawesome-webfont.ttf' %}
         {% endimage %}
         {% image debug=false output='/assets/font/fontawesome-webfont.woff'
-            '../bower_components/font-awesome/font/fontawesome-webfont.woff' %}
+        '../bower_components/font-awesome/font/fontawesome-webfont.woff' %}
         {% endimage %}
     {% endblock %}
 
     {% block javascripts_header %}
-        {% javascripts filter='jsmin' output='/assets/js/modernizr.js'
-            '../bower_components/modernizr/modernizr.js'
+        {% javascripts filter='jsmin' debug=false output='/assets/libs/modernizr.js'
+        '../bower_components/modernizr/modernizr.js'
         %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
@@ -66,7 +63,7 @@
         </div>
     </div>
     {% block javascripts %}
-        {% javascripts debug=false filter='jsmin' output='/assets/js/jquery.js'
+        {% javascripts debug=false filter='jsmin' output='/assets/libs/jquery.js'
         '../bower_components/jquery/dist/jquery.min.js'
         %}
             <script type="text/javascript" src="{{ asset_url }}"></script>

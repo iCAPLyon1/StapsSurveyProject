@@ -1,11 +1,81 @@
 {% extends 'layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets debug=false output='/assets/css/angular-motion.css'
+    '../bower_components/angular-motion/angular-motion.min.css'
+    %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+    {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
     <div class="panel panel-default">
         Quizz {{ page }} page
     </div>
 {% endblock %}
 {% block javascripts %}
+    {{ parent() }}
     <script type="text/javascript">
         window.quiz = {{ quiz|json_encode(constant('JSON_UNESCAPED_UNICODE'))|raw }};
     </script>
+
+    <!-- inject-libs: js -->
+    {% javascripts debug=false filter='jsmin' output='/assets/libs/angular.js'
+    '../bower_components/angular/angular.min.min.js'
+    '../bower_components/angular-animate/angular-animate.min.js'
+    '../bower_components/angular-route/angular-route.min.js'
+    '../bower_components/angular-touch/angular-touch.min.js'
+    '../bower_components/angular-strap/dist/angular-strap.min.js'
+    '../bower_components/angular-strap/dist/angular-strap.tpl.min.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% javascripts debug=false filter='jsmin' output='/assets/libs/underscore.js'
+    '../bower_components/underscore/underscore-min.js'
+    '../bower_components/angular-underscore-module/angular-underscore-module.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <!-- endinject -->
+
+    <!-- inject: js -->
+    <!-- Bootstraping -->
+    {% javascripts debug=true output='/app/app.module.js'
+    '../src/StapsSurvey/Resources/client/app/app.module.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <!-- Blocks -->
+    {% javascripts debug=true output='/app/blocks/router.js'
+    '../src/StapsSurvey/Resources/client/app/blocks/router.module.js'
+    '../src/StapsSurvey/Resources/client/app/blocks/routerhelper.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <!-- Core -->
+    {% javascripts debug=true output='/app/core/core.js'
+    '../src/StapsSurvey/Resources/client/app/core/core.module.js'
+    '../src/StapsSurvey/Resources/client/app/core/core.constants.js'
+    '../src/StapsSurvey/Resources/client/app/core/core.config.js'
+    '../src/StapsSurvey/Resources/client/app/core/data.service.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <!-- Quiz -->
+    {% javascripts debug=true output='/app/quiz/quiz.js'
+    '../src/StapsSurvey/Resources/client/app/quiz/quiz.module.js'
+    '../src/StapsSurvey/Resources/client/app/quiz/quiz.route.js'
+    '../src/StapsSurvey/Resources/client/app/quiz/quiz.directive.js'
+    '../src/StapsSurvey/Resources/client/app/quiz/quiz-question.directive.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <!-- endinject -->
+
 {% endblock %}

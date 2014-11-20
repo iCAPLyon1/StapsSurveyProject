@@ -2,8 +2,12 @@ index:
   path: /
   defaults: { _controller: 'StapsSurvey\Controller\AppController::indexAction' }
 
-survey:
-  path: /survey/{page}
-  defaults: { _controller: 'StapsSurvey\Controller\AppController::surveyAction', page: 1 }
+quiz:
+  path: /quiz/{page}
+  defaults: { _controller: 'StapsSurvey\Controller\AppController::quizAction', page: 1 }
   requirements:
     page: \d+
+
+results:
+  path: /results
+  defaults: {_controller: 'StapsSurvey\Controller\AppController::resultsAction'}
