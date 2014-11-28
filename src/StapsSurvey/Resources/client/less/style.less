@@ -1,2 +1,149 @@
-html, body{padding: 0};
-body{background-color:#efefef;}
+#stepprogressbar {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-left: 0;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+
+  li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 11px;
+    float: left;
+    position: relative;
+    text-align: center;
+    padding: 0 15px;
+
+    &:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 25px;
+      line-height: 25px;
+      display: block;
+      font-size: 11px;
+      color: #333;
+      background: white;
+      border-radius: 3px;
+      margin: 0 auto 5px auto;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: white;
+      position: absolute;
+      left: -50%;
+      top: 12px;
+      z-index: -1; /*put it behind the numbers*/
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    }
+
+    &:first-child:after {
+      /*connector not needed before the first step*/
+      content: none;
+    }
+
+    &.active:before,  &.active:after{
+      background: #008cba;
+      color: white;
+    }
+  }
+}
+
+.panel {
+  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.14);
+  -moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.14);
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.14);
+}
+
+div.ssp-quiz-container {
+  div.ssp-quiz {
+    &>h3{margin-top:0;}
+    div.ssp-question {
+      div.ssp-question-section-subquestion{
+        font-size:13px;
+        padding: 4px 0;
+        border-bottom: 1px solid #dfdfdf;
+        &:last-child{
+          border-bottom: none;
+        }
+        div.ssp-sub-question-answers {
+          font-size: 11px;
+          .ssp-sub-question-answer{
+            border:1px solid transparent;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            cursor: pointer;
+            &:hover{
+              background-color: #ccc;
+            }
+            &.choice-selected {
+              border-color:#008cba;
+              &:before {
+                color: #008cba;
+                font-family: "FontAwesome";
+                content: "\f00c";
+                margin-left:-1em;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.ssp-quiz-pagination{
+      margin-bottom: 30px;
+      a{
+        -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.14);
+        -moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.14);
+        box-shadow: 2px 2px 3px rgba(0,0,0,0.14);
+        &.disabled{
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+        &.btn-primary{
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  div.ssp-quiz-results {
+    div.ssp-quiz-results-buttons {
+      margin: 10px 0;
+      &:after{
+        clear: both;
+      }
+      button, a {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+div#main {position: relative;}
+.slide {
+  position: relative;
+}
+.slide.ng-leave, .slide.ng-enter {
+  //left: 0;
+  position: absolute;
+  width: 100%;
+  //right: 0;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+.slide.left.ng-enter, .slide.right.ng-leave.ng-leave-active {
+  left: 100%;
+}
+.slide.left.ng-enter.ng-enter-active, .slide.left.ng-leave, .slide.right.ng-enter.ng-enter-active, .slide.right.ng-leave {
+  left: 0;
+}
+.slide.left.ng-leave.ng-leave-active, .slide.right.ng-enter {
+  left: -100%;
+}
+.slide.ng-leave{
+  display: none;
+}

@@ -18,7 +18,7 @@ class AppController extends AbstractController
         $quizPath = __DIR__.'/../Model/quiz.xml';
         if(file_exists($quizPath)){
             $quiz = simplexml_load_file($quizPath);
-            $quiz = XML2Array::parse($quiz, array("filter"));
+            $quiz = XML2Array::parse($quiz, array("filter", "result", "message"));
         }
 
 		return $this->app['twig']->render('page.html.twig',array('page'=>$page, 'quiz'=>$quiz));

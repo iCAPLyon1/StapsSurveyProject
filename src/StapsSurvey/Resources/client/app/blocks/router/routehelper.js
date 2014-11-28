@@ -1,13 +1,14 @@
 (function() {
     'use strict';
-    angular
-        .module('blocks.router')
-        .provider('routehelperConfigProvider', routehelperConfigProvider)
+
+    angular.module('blocks.router')
+        .provider('routehelperConfig', routehelperConfig)
         .factory('routehelper', routehelper);
 
-    routehelper.$inject = ['$location', '$rootScope', '$route', 'routehelperConfigProvider'];
+    routehelper.$inject = ['$location', '$rootScope', '$route', 'routehelperConfig', '_'];
+
     // Must configure via the routehelperConfigProvider
-    function routehelperConfigProvider() {
+    function routehelperConfig() {
         /* jshint validthis:true */
         this.config = {
         // These are the properties we need to set
@@ -22,15 +23,15 @@
         };
     }
 
-    function routehelper($location, $rootScope, $route, routehelperConfigProvider) {
+    function routehelper($location, $rootScope, $route, routehelperConfig, _) {
         var handlingRouteChangeError = false;
         var routeCounts = {
             errors: 0,
             changes: 0
         };
-
+        var routesVisited = [];
         var routes = [];
-        var $routeProvider = routehelperConfigProvider.config.$routeProvider;
+        var $routeProvider = routehelperConfig.config.$routeProvider;
 
         var service = {
             configureRoutes: configureRoutes,
@@ -45,10 +46,10 @@
         function configureRoutes(routes) {
             routes.forEach(function(route) {
                 route.config.resolve =
-                    angular.extend(route.config.resolve || {}, routehelperConfigProvider.config.resolveAlways);
+                    angular.extend(route.config.resolve || {}, routehelperConfig.config.resolveAlways);
                 $routeProvider.when(route.url, route.config);
             });
-            $routeProvider.otherwise({redirectTo: '/'});
+            $routeProvider.otherwise({redirectTo: '/1'});
         }
 
         function handleRoutingErrors() {
@@ -66,14 +67,15 @@
                         'unknown target';
                     var msg = 'Error routing to ' + destination + '. ' + (rejection.msg || '');
                     console.log(msg);
-                    $location.path('/');
+                    $location.path('/1');
                 }
             );
         }
 
         function init() {
             handleRoutingErrors();
-            updateDocTitle();
+            updatePageTitle();
+            updateNavigationAnimation();
         }
 
         function getRoutes() {
@@ -89,23 +91,47 @@
             return routes;
         }
 
-        function updateDocTitle() {
+        function updatePageTitle() {
             $rootScope.$on('$routeChangeSuccess',
                 function(event, current, previous) {
                     routeCounts.changes++;
                     handlingRouteChangeError = false;
 
-                    //Update page number for progress bar
-                    if (current.params.page) {
-                        current.page = parseInt(current.params.page);
-                    } else if (current.page) {
-                        current.params.page = current.page;
-                    } else {
-                        current.params.page = current.page = 1;
+                    var title = routehelperConfig.config.docTitle + ' ' + (current.title || '');
+                    if (routesVisited.indexOf(current.page) == -1)  {
+                        routesVisited.push(current.page);
                     }
 
-                    var title = routehelperConfigProvider.config.docTitle + ' ' + (current.title || '');
                     $rootScope.title = title; // data bind to <title>
+                    $rootScope.page = current.page;
+                }
+            );
+        }
+
+        function updateNavigationAnimation() {
+            //Test route change start
+            $rootScope.$on('$routeChangeStart',
+                function(event, next, current) {
+                    //Update page number for progress bar
+                    if (!_.isUndefined(next.params.page)) {
+                        var pageNo = parseInt(next.params.page);
+                        if(isNaN(pageNo)) $location.path('/1');
+                    }
+                    if (next.params.page) {
+                        next.page = Math.max(1, parseInt(next.params.page));
+                    } else if (next.page) {
+                        next.params.page = next.page;
+                    } else {
+                        next.params.page = next.page = 1;
+                    }
+
+                    var currentPage = current?current.page:0;
+                    var nextPage = next.page;
+                    if (nextPage>1 && routesVisited.indexOf(nextPage-1)==-1) {
+                        var routesVisitedCount = routesVisited.length;
+                        $location.path('/'+((routesVisitedCount>0)?routesVisited[routesVisitedCount-1]:1));
+                    }
+                    $rootScope.isDownwards = nextPage<=currentPage;
                 }
             );
         }

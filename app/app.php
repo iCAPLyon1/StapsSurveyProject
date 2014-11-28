@@ -10,6 +10,7 @@ use SilexAssetic\AsseticServiceProvider;
 use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
+
 // Enable for debug cache profiler
 //use Silex\Provider\WebProfilerServiceProvider;
 //use Silex\Provider\ServiceControllerServiceProvider;
@@ -25,7 +26,7 @@ $app->register(new UrlGeneratorServiceProvider());
 $app->register(new TranslationServiceProvider());
 $app['translator'] = $app->share($app->extend('translator', function ($translator, $app) {
 	$translator->addLoader('yaml', new YamlFileLoader());
-	$translator->addResource('yaml', __DIR__.'/../src/StapsSurvey/Resources/locales/fr.yml', 'fr');
+	$translator->addResource('yaml', __DIR__.'/../src/StapsSurvey/Resources/translations/home.fr.yml', 'fr');
 	
 	return $translator;
 }));

@@ -14,9 +14,6 @@ $app['resolver'] = $app->share(function () use ($app) {
 // Local
 $app['locale'] = 'fr';
 $app['session.default_locale'] = $app['locale'];
-$app['translator.messages'] = array(
-	'fr' => __DIR__.'/../../src/StapsSurvey/Resources/locales/fr.yml',
-);
 
 // Cache
 $app['cache.path'] = __DIR__ . '/../cache';

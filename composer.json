@@ -28,8 +28,9 @@
 		"symfony/css-selector": "~2.5",
 		"symfony/dom-crawler": "~2.5",
 		"symfony/filesystem": "~2.5",
+        "symfony/translation": "~2.5",
 		"mheap/silex-assetic" : "~1.0",
-		"oyejorge/less.php" : "~1.7",
+        "oyejorge/less.php" : "~1.7",
         "natxet/CssMin": "dev-master",
         "mrclay/minify": "dev-master"
 	},

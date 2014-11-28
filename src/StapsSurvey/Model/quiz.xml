@@ -6,9 +6,18 @@
         <question>
             <id>rs</id>
             <title>Résultats scolaires</title>
+            <result>
+                <rule condition="&gt;=0.5">
+                    <message>Votre niveau scolaire et la maitrise de certains enseignements sont favorables à votre réussite enSTAPS</message>
+                </rule>
+                <rule condition="&lt;0.5">
+                    <message>Votre niveau scolaire et la non-maitrise de certains enseignements sont défavorables à votre réussite en STAPS</message>
+                </rule>
+            </result>
             <section>
                 <title>Résultats scolaires</title>
                 <subQuestion>
+                    <id>1</id>
                     <title>Notes en français au baccalauréat</title>
                     <answer>
                         <title>Moins de 8</title>
@@ -28,6 +37,7 @@
                     </answer>
                 </subQuestion>
                 <subQuestion>
+                    <id>2</id>
                     <title><![CDATA[Notes en SVT ou physique‐chimie en 1<sup>ère</sup>]]></title>
                     <answer>
                         <title>Moins de 8</title>
@@ -47,6 +57,7 @@
                     </answer>
                 </subQuestion>
                 <subQuestion filter="a,b">
+                    <id>3</id>
                     <title>Notes en philosophie en terminale</title>
                     <answer>
                         <title>Moins de 8</title>
@@ -66,6 +77,7 @@
                     </answer>
                 </subQuestion>
                 <subQuestion filter="a,b">
+                    <id>4</id>
                     <title>Notes en SVT ou physique‐chimie en terminale</title>
                     <answer>
                         <title>Moins de 8</title>
@@ -89,27 +101,27 @@
             <filter>
                 <title>Filières</title>
                 <option>
-                    <id>a</id>
+                    <value>a</value>
                     <coefficient>1.2</coefficient>
                     <title>Bac S</title>
                 </option>
                 <option>
-                    <id>b</id>
+                    <value>b</value>
                     <coefficient>1</coefficient>
                     <title>Bac ES ou L</title>
                 </option>
                 <option>
-                    <id>c</id>
+                    <value>c</value>
                     <coefficient>0.9</coefficient>
                     <title>Bac STT ou STI</title>
                 </option>
                 <option>
-                    <id>d</id>
+                    <value>d</value>
                     <coefficient>0.8</coefficient>
                     <title>Bac SM</title>
                 </option>
                 <option>
-                    <id>e</id>
+                    <value>e</value>
                     <coefficient>0.7</coefficient>
                     <title>Bac Pro</title>
                 </option>
@@ -118,11 +130,20 @@
         <question>
             <id>of</id>
             <title>Outils fondamentaux</title>
+            <result>
+                <rule condition="&gt;=0.5">
+                    <message>Vos compétences et vos acquisitions scolaires  sont favorables à votre réussite enSTAPS</message>
+                </rule>
+                <rule condition="&lt;0.5">
+                    <message>Vos compétences et vos acquisitions scolaires sont défavorables à votre réussite en STAPS</message>
+                </rule>
+            </result>
             <section>
                 <title>Compétences</title>
                 <subQuestion>
+                    <id>5</id>
                     <title>
-                        <![CDATA[Maîtrise de l’outil informatique <br/>(traitement de texte, tableur, Internet…)]]></title>
+                        <![CDATA[Maîtrise de l’outil informatique (traitement de texte, tableur, Internet…)]]></title>
                     <answer>
                         <title>Aucune</title>
                         <value>0</value>
@@ -141,6 +162,7 @@
                     </answer>
                 </subQuestion>
                 <subQuestion>
+                    <id>6</id>
                     <title>Parlez‐vous une langue étrangère ?</title>
                     <answer>
                         <title>Non</title>
@@ -160,8 +182,8 @@
                     </answer>
                 </subQuestion>
                 <subQuestion>
+                    <id>7</id>
                     <title>Savez‐vous prendre des notes de cours ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -178,11 +200,10 @@
                         <title>Bien</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>8</id>
                     <title>Savez‐vous faire une fiche de lecture ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -199,11 +220,10 @@
                         <title>Bien</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>9</id>
                     <title>Savez‐vous faire un plan détaillé ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -220,11 +240,10 @@
                         <title>Bien</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>10</id>
                     <title>Savez‐vous faire un travail de synthèse ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -241,11 +260,10 @@
                         <title>Bien</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>11</id>
                     <title>Etes‐vous capable de travailler seul ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -262,11 +280,10 @@
                         <title>Très capable</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>12</id>
                     <title>Etes‐vous capable de travailler en groupe ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -283,7 +300,6 @@
                         <title>Très capable</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <base>24</base>
             </section>
@@ -294,12 +310,19 @@
         <question>
             <id>sp</id>
             <title>Spécialité sportive</title>
-            <section filter="a,b">
+            <result>
+                <rule condition="&gt;=0.5">
+                    <message>Vos compétences et votre vécu sportifs  dans une spécialité sportive sont favorables à votre réussite enSTAPS</message>
+                </rule>
+                <rule condition="&lt;0.5">
+                    <message>Votre niveau de compétences et votre vécu sportifs dans une spécialité sportive  sont défavorables à votre réussite en STAPS. Il vous faut si c’est encore possible vous mettre à une pratique d’entraînement régulière et vous confronter à un niveau de compétition.</message>
+                </rule>
+            </result>
+            <section filter="a">
                 <title>Activité physique artistique ou d’expression</title>
-
                 <subQuestion>
+                    <id>13</id>
                     <title>Heures d’entraînement hebdomadaire</title>
-
                     <answer>
                         <title>Moins de 3h</title>
                         <value>0</value>
@@ -316,11 +339,10 @@
                         <title>Plus de 9h</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>14</id>
                     <title>Nombre d’années de pratique</title>
-
                     <answer>
                         <title>Moins de 2 ans</title>
                         <value>0</value>
@@ -337,17 +359,14 @@
                         <title>Plus de 6 ans</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
-
                 <base>6</base>
             </section>
-            <section filter="c,d">
+            <section filter="b">
                 <title>Activité sportive</title>
-
                 <subQuestion>
+                    <id>15</id>
                     <title>Pratiquez‐vous en compétition ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -364,11 +383,10 @@
                         <title>Régulièrement (Milieu Fédéral)</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>16</id>
                     <title>Si oui, à quel niveau</title>
-
                     <answer>
                         <title>Départemental</title>
                         <value>0</value>
@@ -385,11 +403,10 @@
                         <title>International</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>17</id>
                     <title>Heures d’entraînement hebdomadaire</title>
-
                     <answer>
                         <title>Moins de 3h</title>
                         <value>0</value>
@@ -406,11 +423,10 @@
                         <title>Plus de 9h</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>18</id>
                     <title>Nombre d’années de pratique</title>
-
                     <answer>
                         <title>Moins de 2 ans</title>
                         <value>0</value>
@@ -433,29 +449,194 @@
             <filter>
                 <title>Spécialité</title>
                 <option>
-                    <id>a</id>
-                    <title>dance</title>
+                    <value>a</value>
+                    <title>arts du cirque</title>
                 </option>
                 <option>
-                    <id>b</id>
-                    <title>cirque</title>
-                </option>
-                <option>
-                    <id>c</id>
+                    <value>b</value>
                     <title>athlétisme</title>
                 </option>
                 <option>
-                    <id>d</id>
-                    <title>sport collectif</title>
+                    <value>b</value>
+                    <title>aviron</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>badminton</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>baseball</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>basket</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>biathlon</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>bmx</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>boule lyonnaise</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>cyclisme piste/route</title>
+                </option>
+                <option>
+                    <value>a</value>
+                    <title>danses et activités d'expression</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>eaux-vives</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>équitation</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>escalade</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>escrime</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>football/football américain</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>golf</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>gymnastique</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>gymnastique rythmique</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>handball</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>hockey</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>kayak</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>kite surf</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>natation</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>natation synchronisée</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>patinage artistique</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>pentathlon</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>plongeon</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>rugby</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>ski/snow</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>sports de combat</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>sports plein nature</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>squash</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>surf</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>tennis</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>tennis de table</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>tir à l'arc</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>triathlon</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>voile/planche à voile</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>volley-ball</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>vtt</title>
+                </option>
+                <option>
+                    <value>b</value>
+                    <title>water polo</title>
+                </option>
+                <option>
+                    <value>a</value>
+                    <title>AUTRE</title>
                 </option>
             </filter>
         </question>
         <question>
             <id>po</id>
             <title>Polyvalence dans les autres activités sportives</title>
+            <result>
+                <rule condition="&gt;=0.5">
+                    <message>Vos compétences et votre vécu sportifs en général sont favorables à votre réussite enSTAPS.</message>
+                </rule>
+                <rule condition="&lt;0.5">
+                    <message>Vos compétences et votre vécu sportifs en général sont défavorables à votre réussite en STAPS. Il vous faut vous diversifier et développer des compétences effectives dans d’autres pratiques sportives.</message>
+                </rule>
+            </result>
             <section>
                 <title>Pratiques d’activités physiques autres que votre spécialité</title>
                 <subQuestion>
+                    <id>19</id>
                     <title>Sport collectif (football…)</title>
                     <answer>
                         <title>Jamais</title>
@@ -475,8 +656,8 @@
                     </answer>
                 </subQuestion>
                 <subQuestion>
+                    <id>20</id>
                     <title>Sport de raquettes (tennis …)</title>
-
                     <answer>
                         <title>Jamais</title>
                         <value>0</value>
@@ -493,11 +674,10 @@
                         <title>Très souvent</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>21</id>
                     <title>Sport de combat (judo …)</title>
-
                     <answer>
                         <title>Jamais</title>
                         <value>0</value>
@@ -514,11 +694,10 @@
                         <title>Très souvent</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>22</id>
                     <title>Activités physiques de pleine nature (escalade…)</title>
-
                     <answer>
                         <title>Jamais</title>
                         <value>0</value>
@@ -535,11 +714,10 @@
                         <title>Très souvent</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>23</id>
                     <title>Activités d’expression (danse, cirque…)</title>
-
                     <answer>
                         <title>Jamais</title>
                         <value>0</value>
@@ -556,11 +734,10 @@
                         <title>Très souvent</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>24</id>
                     <title>Activités gymniques (gymnastique sportive, acrosport…)</title>
-
                     <answer>
                         <title>Jamais</title>
                         <value>0</value>
@@ -577,9 +754,9 @@
                         <title>Très souvent</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>25</id>
                     <title>Natation (natation sportive)</title>
 
                     <answer>
@@ -601,8 +778,8 @@
 
                 </subQuestion>
                 <subQuestion>
+                    <id>26</id>
                     <title>Athlétisme (saut en longueur…)</title>
-
                     <answer>
                         <title>Jamais</title>
                         <value>0</value>
@@ -619,11 +796,10 @@
                         <title>Très souvent</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>27</id>
                     <title>Note en EPS au baccalauréat</title>
-
                     <answer>
                         <title>Moins de 10</title>
                         <value>0</value>
@@ -640,9 +816,7 @@
                         <title>Plus de 15</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
-
                 <base>27</base>
             </section>
         </question>
@@ -653,12 +827,19 @@
         <question>
             <id>mo</id>
             <title>Motivation, projet et expérience d’encadrement</title>
+            <result>
+                <rule condition="&gt;=0.5">
+                    <message>Votre degré de motivation, votre projet et vos dispositions à encadrer ou animer sont favorables à votre réussite en STAPS.</message>
+                </rule>
+                <rule condition="&lt;0.5">
+                    <message>Votre degré de motivation, votre projet et vos dispositions à encadrer ou animer sont défavorables à votre réussite en STAPS.</message>
+                </rule>
+            </result>
             <section>
                 <title>Qu’en est‐il de votre motivation et de votre projet professionnel ?</title>
-
                 <subQuestion>
+                    <id>28</id>
                     <title>Depuis combien de temps prévoyez‐vous d’entrer en STAPS ?</title>
-
                     <answer>
                         <title>Moins d’1 an</title>
                         <value>0</value>
@@ -675,11 +856,10 @@
                         <title>Plus de 3 ans</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>29</id>
                     <title>Avez‐vous construit votre parcours scolaire en fonction de cela ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -688,11 +868,10 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>30</id>
                     <title>Connaissez‐vous les divers enseignements dispensés en STAPS ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -709,11 +888,10 @@
                         <title>Parfaitement</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>31</id>
                     <title>Avez‐vous pris de dispositions pour pallier vos points faibles ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -730,13 +908,12 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>32</id>
                     <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Activité Physique
                         Adaptée et Santé ?
                     </title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -753,13 +930,10 @@
                         <title>Très précisément</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
-                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Education et Motricité
-                        ?
-                    </title>
-
+                    <id>33</id>
+                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Education et Motricité?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -776,13 +950,10 @@
                         <title>Très précisément</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
-                    <title>Vous êtes vous informés sur les objectifs et débouchés
-                        de la filière Entraînement Sportif ?
-                    </title>
-
+                    <id>34</id>
+                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Entraînement Sportif ?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -799,13 +970,10 @@
                         <title>Très précisément</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
-                    <title>Vous êtes vous informés sur les objectifs et débouchés
-                        de la filière Management du Sport ?
-                    </title>
-
+                    <id>35</id>
+                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Management du Sport ?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -822,11 +990,10 @@
                         <title>Très précisément</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>36</id>
                     <title>Avez‐vous un projet professionnel précis ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -835,17 +1002,14 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
-
-                <base>54</base>
+                <base>51</base>
             </section>
             <section>
                 <title>Expérience d’encadrement sportif</title>
-
                 <subQuestion>
+                    <id>37</id>
                     <title>Etes‐vous engagé dans une tâche d’animation sportive ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -854,11 +1018,10 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>38</id>
                     <title>Si oui, depuis combien de temps ?</title>
-
                     <answer>
                         <title>Moins d’1 an</title>
                         <value>0</value>
@@ -871,11 +1034,10 @@
                         <title>Plus de 3 ans</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>39</id>
                     <title>Etes‐vous titulaire de diplômes d’animateur sportif ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -892,17 +1054,14 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
-
-                <base>54</base>
+                <base>51</base>
             </section>
             <section>
                 <title>Expériences d’encadrement autre que sportif</title>
-
                 <subQuestion>
+                    <id>40</id>
                     <title>Etes‐vous engagé dans une tâche d’animation autre que sportive ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -911,11 +1070,10 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>41</id>
                     <title>Etes‐vous titulaire du BAFA ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -932,17 +1090,14 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
-
-                <base>54</base>
+                <base>51</base>
             </section>
             <section>
                 <title>Autres</title>
-
                 <subQuestion>
+                    <id>42</id>
                     <title>Etes‐vous titulaire du diplôme de secourisme (AFPS) ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -959,11 +1114,10 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>43</id>
                     <title>Etes‐vous titulaire du diplôme de surveillant de baignade ou du BNSSA ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -980,13 +1134,10 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
-                    <title>Pensez‐vous que vous aimeriez vous occuper d’enfants, d’adolescents, de personnes handicapées
-                        ou de personnes âgées et d’une manière plus générale, d’autrui ?
-                    </title>
-
+                    <id>44</id>
+                    <title>Pensez‐vous que vous aimeriez vous occuper d’enfants, d’adolescents, de personnes handicapées ou de personnes âgées et d’une manière plus générale, d’autrui ?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -995,21 +1146,26 @@
                         <title>Oui</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
-
-                <base>54</base>
+                <base>51</base>
             </section>
         </question>
         <question>
             <id>sc</id>
             <title>Santé physique et Capacité de travail</title>
+            <result>
+                <rule condition="&gt;=0.5">
+                    <message>Votre santé physique et votre capacité de travail sont favorables à votre réussite en STAPS.</message>
+                </rule>
+                <rule condition="&lt;0.5">
+                    <message>Votre santé physique et votre capacité de travail sont défavorables à votre réussite en STAPS.</message>
+                </rule>
+            </result>
             <section>
                 <title>Santé physique</title>
-
                 <subQuestion>
+                    <id>45</id>
                     <title>Vous qualifieriez votre santé de…</title>
-
                     <answer>
                         <title>Mauvaise</title>
                         <value>0</value>
@@ -1026,11 +1182,10 @@
                         <title>Excellente</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>46</id>
                     <title>Avez‐vous des problèmes respiratoires (asthme…) ?</title>
-
                     <answer>
                         <title>Très souvent</title>
                         <value>0</value>
@@ -1047,11 +1202,10 @@
                         <title>Jamais</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>47</id>
                     <title>Avez‐vous des problèmes de dos ?</title>
-
                     <answer>
                         <title>Très souvent</title>
                         <value>0</value>
@@ -1068,11 +1222,10 @@
                         <title>Jamais</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>48</id>
                     <title>Avez‐vous des problèmes articulaires (chevilles, genoux…) ?</title>
-
                     <answer>
                         <title>Très souvent</title>
                         <value>0</value>
@@ -1089,11 +1242,10 @@
                         <title>Jamais</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>49</id>
                     <title>Avez‐vous des problèmes musculaires ?</title>
-
                     <answer>
                         <title>Très souvent</title>
                         <value>0</value>
@@ -1110,11 +1262,10 @@
                         <title>Jamais</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>50</id>
                     <title>Avez‐vous des problèmes auditifs ou visuels ?</title>
-
                     <answer>
                         <title>Très souvent</title>
                         <value>0</value>
@@ -1131,11 +1282,10 @@
                         <title>Jamais</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>51</id>
                     <title>Avez‐vous des problèmes de voix ou d’élocution ?</title>
-
                     <answer>
                         <title>Très souvent</title>
                         <value>0</value>
@@ -1152,18 +1302,14 @@
                         <title>Jamais</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
-
-                <base>33</base>
+                <base>39</base>
             </section>
             <section>
                 <title>Capacité de travail</title>
                 <subQuestion>
-                    <title>Combien d’h par jour êtes‐vous capable de consacrer au travail scolaire en dehors des cours
-                        ?
-                    </title>
-
+                    <id>52</id>
+                    <title>Combien d’h par jour êtes‐vous capable de consacrer au travail scolaire en dehors des cours ?</title>
                     <answer>
                         <title>1h</title>
                         <value>0</value>
@@ -1180,11 +1326,10 @@
                         <title>Plus de 3h</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>53</id>
                     <title>Etes‐vous capable de vous concentrer longtemps sur une même tâche ?</title>
-
                     <answer>
                         <title>Pas du tout</title>
                         <value>0</value>
@@ -1201,11 +1346,10 @@
                         <title>Très</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>54</id>
                     <title>Etes‐vous capable de passer rapidement d’une tâche à une autre ?</title>
-
                     <answer>
                         <title>Pas du tout</title>
                         <value>0</value>
@@ -1222,11 +1366,10 @@
                         <title>Très</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>55</id>
                     <title>Apprenez‐vous rapidement, retenez‐vous bien ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -1243,11 +1386,10 @@
                         <title>Bien</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>56</id>
                     <title>Avez‐vous besoin de récupérer longtemps après une pratique?</title>
-
                     <answer>
                         <title>Très</title>
                         <value>0</value>
@@ -1260,13 +1402,10 @@
                         <title>Très peu</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
-                    <title>Avez‐vous besoin de récupérer longtemps après une pratique sportive afin de pouvoir vous
-                        consacrer à votre travail scolaire ?
-                    </title>
-
+                    <id>57</id>
+                    <title>Avez‐vous besoin de récupérer longtemps après une pratique sportive afin de pouvoir vous consacrer à votre travail scolaire ?</title>
                     <answer>
                         <title>Très longtemps</title>
                         <value>0</value>
@@ -1283,20 +1422,26 @@
                         <title>Très peu de temps</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
-                <base>33</base>
+                <base>39</base>
             </section>
         </question>
         <question>
             <id>aa</id>
             <title>Activités autres que scolaires et sportives</title>
+            <result>
+                <rule condition="&gt;=0.5">
+                    <message>Votre ouverture et votre curiosité sont favorables à votre réussite en STAPS.</message>
+                </rule>
+                <rule condition="&lt;0.5">
+                    <message>Votre degré d’ouverture et de curiosité sont défavorables à votre réussite en STAPS.</message>
+                </rule>
+            </result>
             <section>
                 <title>Activités autres que scolaires et sportives</title>
-
                 <subQuestion>
+                    <id>58</id>
                     <title>Combien de livres lisez‐vous dans l’année ?</title>
-
                     <answer>
                         <title>De 0 à 2</title>
                         <value>0</value>
@@ -1313,11 +1458,10 @@
                         <title>Plus de 10</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>59</id>
                     <title>Jouez‐vous d’un instrument de musique ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -1334,11 +1478,10 @@
                         <title>Régulièrement</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>60</id>
                     <title>Pratiquez‐vous le dessin ou la peinture ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -1355,11 +1498,10 @@
                         <title>Régulièrement</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>61</id>
                     <title>Pratiquez‐vous la photographie ou la vidéo ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -1376,11 +1518,10 @@
                         <title>Régulièrement</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>62</id>
                     <title>Aimez‐vous voyager ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -1397,9 +1538,9 @@
                         <title>Beaucoup</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>63</id>
                     <title>Suivez‐vous les actualités ?</title>
 
                     <answer>
@@ -1418,11 +1559,10 @@
                         <title>Dans le détail</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
+                    <id>64</id>
                     <title>Vous arrive‐t‐il d’aller voir des spectacles ?</title>
-
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -1439,12 +1579,23 @@
                         <title>Très souvent</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
-
                 <base>21</base>
             </section>
         </question>
-
     </subQuiz>
+    <result>
+        <rule condition="&gt;0.6">
+            <message min="all"><text>Actuellement, il apparait que vous ayez un potentiel élevé à réussir dans cette filière en STAPS. Vos dispositions sont très équilibrées.</text></message>
+        </rule>
+        <rule condition="&lt;0.3">
+            <message min="all"><text>Actuellement, il apparait que vous risquez de rencontrer de très grandes difficultés dans cette filière STAPS.</text></message>
+        </rule>
+        <rule condition="&lt;0.5">
+            <message max="2"><text>Actuellement, il apparait que vous ayez un certain potentiel à réussir en STAPS. Vos dispositions sont relativement équilibrées.</text></message>
+            <message max="4"><text>Actuellement, il apparait que vous risquez de rencontrer certaines difficultés dans cette filière STAPS.</text></message>
+            <message max="6"><text>Actuellement, il apparait que vous risquez de rencontrer des difficultés importantes pour réussie dans cette filière STAPS.</text></message>
+        </rule>
+    </result>
+
 </quiz>
