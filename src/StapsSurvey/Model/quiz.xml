@@ -36,9 +36,9 @@
                         <value>3</value>
                     </answer>
                 </subQuestion>
-                <subQuestion>
+                <subQuestion filter="a,b,c">
                     <id>2</id>
-                    <title><![CDATA[Notes en SVT ou physique‐chimie en 1<sup>ère</sup>]]></title>
+                    <title><![CDATA[Moyennes en SVT ou physique‐chimie en 1<sup>ère</sup>]]></title>
                     <answer>
                         <title>Moins de 8</title>
                         <value>0</value>
@@ -56,9 +56,9 @@
                         <value>3</value>
                     </answer>
                 </subQuestion>
-                <subQuestion filter="a,b">
+                <subQuestion filter="a,b,c,d">
                     <id>3</id>
-                    <title>Notes en philosophie en terminale</title>
+                    <title><![CDATA[Moyennes au 1<sup>er</sup> trimestre en philosophie en terminale]]></title>
                     <answer>
                         <title>Moins de 8</title>
                         <value>0</value>
@@ -76,9 +76,9 @@
                         <value>3</value>
                     </answer>
                 </subQuestion>
-                <subQuestion filter="a,b">
+                <subQuestion filter="a,b,c">
                     <id>4</id>
-                    <title>Notes en SVT ou physique‐chimie en terminale</title>
+                    <title><![CDATA[Moyennes en SVT ou physique‐chimie au 1<sup>er</sup> trimestre en terminale]]></title>
                     <answer>
                         <title>Moins de 8</title>
                         <value>0</value>
@@ -113,12 +113,12 @@
                 <option>
                     <value>c</value>
                     <coefficient>0.9</coefficient>
-                    <title>Bac STT ou STI</title>
+                    <title>Bac ST2S ou STI2D</title>
                 </option>
                 <option>
                     <value>d</value>
                     <coefficient>0.8</coefficient>
-                    <title>Bac SM</title>
+                    <title>Bac STMG</title>
                 </option>
                 <option>
                     <value>e</value>
@@ -643,15 +643,15 @@
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Rarement</title>
+                        <title>1 fois/mois</title>
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement</title>
+                        <title>2-3 fois/mois</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Très souvent</title>
+                        <title>4 ou +/mois</title>
                         <value>3</value>
                     </answer>
                 </subQuestion>
@@ -663,15 +663,15 @@
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Rarement</title>
+                        <title>1 fois/mois</title>
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement</title>
+                        <title>2-3 fois/mois</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Très souvent</title>
+                        <title>4 ou +/mois</title>
                         <value>3</value>
                     </answer>
                 </subQuestion>
@@ -683,15 +683,15 @@
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Rarement</title>
+                        <title>1 fois/mois</title>
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement</title>
+                        <title>2-3 fois/mois</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Très souvent</title>
+                        <title>4 ou +/mois</title>
                         <value>3</value>
                     </answer>
                 </subQuestion>
@@ -703,15 +703,15 @@
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Rarement</title>
+                        <title>1 fois/mois</title>
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement</title>
+                        <title>2-3 fois/mois</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Très souvent</title>
+                        <title>4 ou +/mois</title>
                         <value>3</value>
                     </answer>
                 </subQuestion>
@@ -723,15 +723,15 @@
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Rarement</title>
+                        <title>1 fois/mois</title>
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement</title>
+                        <title>2-3 fois/mois</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Très souvent</title>
+                        <title>4 ou +/mois</title>
                         <value>3</value>
                     </answer>
                 </subQuestion>
@@ -743,39 +743,37 @@
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Rarement</title>
+                        <title>1 fois/mois</title>
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement</title>
+                        <title>2-3 fois/mois</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Très souvent</title>
+                        <title>4 ou +/mois</title>
                         <value>3</value>
                     </answer>
                 </subQuestion>
                 <subQuestion>
                     <id>25</id>
                     <title>Natation (natation sportive)</title>
-
                     <answer>
                         <title>Jamais</title>
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Rarement</title>
+                        <title>1 fois/mois</title>
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement</title>
+                        <title>2-3 fois/mois</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Très souvent</title>
+                        <title>4 ou +/mois</title>
                         <value>3</value>
                     </answer>
-
                 </subQuestion>
                 <subQuestion>
                     <id>26</id>
@@ -785,15 +783,15 @@
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Rarement</title>
+                        <title>1 fois/mois</title>
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement</title>
+                        <title>2-3 fois/mois</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Très souvent</title>
+                        <title>4 ou +/mois</title>
                         <value>3</value>
                     </answer>
                 </subQuestion>

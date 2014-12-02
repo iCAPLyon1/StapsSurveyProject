@@ -26,7 +26,7 @@
     {{ parent() }}
 
     <!-- inject-libs: js -->
-    {% javascripts debug=false filter='jsmin' output='/assets/libs/angular.js'
+    {% javascripts debug=false output='/assets/libs/angular.js'
     '../bower_components/angular/angular.min.js'
     '../bower_components/angular-animate/angular-animate.min.js'
     '../bower_components/angular-sanitize/angular-sanitize.min.js'
@@ -61,14 +61,14 @@
 
     <!-- inject: js -->
     <!-- Bootstraping -->
-    {% javascripts debug=true output='/app/app.module.js'
+    {% javascripts debug=false output='/app/app.module.js'
     '../src/StapsSurvey/Resources/client/app/app.module.js'
     %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
     <!-- Blocks -->
-    {% javascripts debug=true output='/app/blocks/router.js'
+    {% javascripts debug=false output='/app/blocks/router.js'
     '../src/StapsSurvey/Resources/client/app/blocks/router/router.module.js'
     '../src/StapsSurvey/Resources/client/app/blocks/router/routehelper.js'
     %}
@@ -76,7 +76,7 @@
     {% endjavascripts %}
 
     <!-- Core -->
-    {% javascripts debug=true output='/app/core/core.js'
+    {% javascripts debug=false output='/app/core/core.js'
     '../src/StapsSurvey/Resources/client/app/core/core.module.js'
     '../src/StapsSurvey/Resources/client/app/core/core.config.js'
     '../src/StapsSurvey/Resources/client/app/core/data.service.js'
@@ -89,6 +89,7 @@
 
             var quiz = {{ quiz|json_encode(constant('JSON_UNESCAPED_UNICODE'))|raw }};
             var translations = {'results':"{{ 'results'|trans|raw}}",
+                'succeed_in_staps': "{{ 'Are you made to succeed in e-STAPS?'|trans|raw }}",
                 'results_title':"{{ 'results_title'|trans|raw}}",
                 'results_intro':"{{ 'results_intro'|trans|raw}}",
                 'axis':"{{ 'axis'|trans|raw }}",
@@ -101,7 +102,7 @@
     </script>
 
     <!-- Layout -->
-    {% javascripts debug=true output='/app/layout/layout.js'
+    {% javascripts debug=false output='/app/layout/layout.js'
     '../src/StapsSurvey/Resources/client/app/layout/layout.module.js'
     '../src/StapsSurvey/Resources/client/app/layout/stepprogressbar.directive.js'
     '../src/StapsSurvey/Resources/client/app/layout/partials/stepprogressbar.tpl.js'
@@ -110,7 +111,7 @@
     {% endjavascripts %}
 
     <!-- Results -->
-    {% javascripts debug=true output='/app/results/results.js'
+    {% javascripts debug=false output='/app/results/results.js'
     '../src/StapsSurvey/Resources/client/app/results/results.module.js'
     '../src/StapsSurvey/Resources/client/app/results/results.route.js'
     '../src/StapsSurvey/Resources/client/app/results/results.controller.js'
@@ -122,7 +123,7 @@
     <!-- endinject -->
 
     <!-- Quiz -->
-    {% javascripts debug=true output='/app/quiz/quiz.js'
+    {% javascripts debug=false output='/app/quiz/quiz.js'
     '../src/StapsSurvey/Resources/client/app/quiz/quiz.module.js'
     '../src/StapsSurvey/Resources/client/app/quiz/quiz.route.js'
     '../src/StapsSurvey/Resources/client/app/quiz/quiz.controller.js'

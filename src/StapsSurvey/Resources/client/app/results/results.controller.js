@@ -21,13 +21,13 @@
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(200,200,200,0.8)"
             },
-            { // light grey
+            { // green
                 fillColor: "transparent",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(220,220,220,1)",
+                strokeColor: "rgba(67, 172, 106, 1)",
+                pointColor: "rgba(67, 172, 106, 1)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,0.8)"
+                pointHighlightStroke: "rgba(67, 172, 106,0.8)"
             },
             { // blue
                 fillColor: "rgba(0,140,186,0.2)",
@@ -95,7 +95,7 @@
                     for (var l = 0; l<question.result.rules.length; l++) {
                         var rule = question.result.rules[l];
                         if (eval(questionScore+rule['@condition'])) {
-                            messages.push({'name':translations.axis+" "+question.id.toUpperCase(), 'text':rule.message});
+                            messages.push({'name':question.title+" ("+translations.axis+" "+question.id.toUpperCase()+")", 'text':rule.message});
                         }
                     }
                 }
@@ -145,16 +145,22 @@
             var pdf = new jsPDF('p', 'cm');
             var radarPng = document.getElementById(canvasId).toDataURL();
 
-            pdf.addImage(radarPng, 'PNG', -4, 1);
             pdf.setFontSize(12);
+            var lines = pdf.splitTextToSize(translations.succeed_in_staps, 19);
+            pdf.text(1, 2, lines);
+            var introtext = $('<p>'+vm.introtext+'</p>').text();
+            lines = pdf.splitTextToSize(introtext, 19);
+            pdf.text(1, 3, lines);
+            pdf.addImage(radarPng, 'PNG', -4, 4);
 
-            var lines = pdf.splitTextToSize(vm.explaintext, 19.5);
-            pdf.text(1, 16, lines);
-            var startFrom = 16 + lines.length*0.5 + 0.5;
+
+            lines = pdf.splitTextToSize(vm.explaintext, 19);
+            pdf.text(1, 20, lines);
+            var startFrom = 20 + lines.length*0.5 + 0.5;
             for (var i = 0; i < vm.chartData.messages.length; i++) {
                 var message = vm.chartData.messages[i];
                 pdf.setFontType("bold");
-                lines = pdf.splitTextToSize(message.text, 19.5);
+                lines = pdf.splitTextToSize(message.text, 19);
                 var nextStartFrom = startFrom + lines.length*0.5 + 1;
                 if (nextStartFrom > 28) {
                     pdf.addPage();

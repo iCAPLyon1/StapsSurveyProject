@@ -57,13 +57,13 @@
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(200,200,200,0.8)"
             },
-            { // light grey
+            { // green
                 fillColor: "transparent",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(220,220,220,1)",
+                strokeColor: "rgba(67, 172, 106, 1)",
+                pointColor: "rgba(67, 172, 106, 1)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,0.8)"
+                pointHighlightStroke: "rgba(67, 172, 106,0.8)"
             },
             { // blue
                 fillColor: "rgba(0,140,186,0.2)",
@@ -131,7 +131,7 @@
                     for (var l = 0; l<question.result.rules.length; l++) {
                         var rule = question.result.rules[l];
                         if (eval(questionScore+rule['@condition'])) {
-                            messages.push({'name':translations.axis+" "+question.id.toUpperCase(), 'text':rule.message});
+                            messages.push({'name':question.title+" ("+translations.axis+" "+question.id.toUpperCase()+")", 'text':rule.message});
                         }
                     }
                 }
@@ -181,16 +181,22 @@
             var pdf = new jsPDF('p', 'cm');
             var radarPng = document.getElementById(canvasId).toDataURL();
 
-            pdf.addImage(radarPng, 'PNG', -4, 1);
             pdf.setFontSize(12);
+            var lines = pdf.splitTextToSize(translations.succeed_in_staps, 19);
+            pdf.text(1, 2, lines);
+            var introtext = $('<p>'+vm.introtext+'</p>').text();
+            lines = pdf.splitTextToSize(introtext, 19);
+            pdf.text(1, 3, lines);
+            pdf.addImage(radarPng, 'PNG', -4, 4);
 
-            var lines = pdf.splitTextToSize(vm.explaintext, 19.5);
-            pdf.text(1, 16, lines);
-            var startFrom = 16 + lines.length*0.5 + 0.5;
+
+            lines = pdf.splitTextToSize(vm.explaintext, 19);
+            pdf.text(1, 20, lines);
+            var startFrom = 20 + lines.length*0.5 + 0.5;
             for (var i = 0; i < vm.chartData.messages.length; i++) {
                 var message = vm.chartData.messages[i];
                 pdf.setFontType("bold");
-                lines = pdf.splitTextToSize(message.text, 19.5);
+                lines = pdf.splitTextToSize(message.text, 19);
                 var nextStartFrom = startFrom + lines.length*0.5 + 1;
                 if (nextStartFrom > 28) {
                     pdf.addPage();
@@ -225,19 +231,23 @@
             '<div class="ssp-quiz-results panel panel-default">'+
                 '<div class="panel-heading"><h3 class="ssp-quiz-results-title panel-title" data-ng-bind-html="::vm.paneltitle"></h3></div>'+
                 '<div class="ssp-quiz-results-body panel-body">' +
-                    '<div class="ssp-quiz-results-info" data-ng-bind-html="::vm.introtext"></div>'+
                     '<div class="ssp-quiz-results-buttons">' +
-                        '<button class="btn btn-primary pull-right" data-ng-click="vm.exportPdf(\'radar\')"><i class="fa fa-file-pdf-o"></i> Export to pdf</button>' +
-                        '<a id="ssq-quiz-graph-to-png-link" id="save-results-as-png-btn" class="btn btn-default pull-right" data-ng-click="vm.saveAsPng(\'ssq-quiz-graph-to-png-link\', \'radar\')"><i class="fa fa-file-image-o"></i> Save as image</a>' +
+                        '<button class="btn btn-primary pull-right" data-ng-click="vm.exportPdf(\'radar\')"><i class="fa fa-file-pdf-o"></i> Enregistrer en pdf</button>' +
+                        '<a id="ssq-quiz-graph-to-png-link" class="btn btn-default pull-right" data-ng-click="vm.saveAsPng(\'ssq-quiz-graph-to-png-link\', \'radar\')"><i class="fa fa-file-image-o"></i> Enregistrer en image </a>' +
+                        '<div class="clearfix"></div>'+
                     '</div>'+
+                    '<div class="ssp-quiz-results-info text-center" data-ng-bind-html="::vm.introtext"></div>'+
                     '<div class="ssp-quiz-results-graph">' +
                         '<canvas id="radar" class="chart chart-radar" data="vm.chartData.data" colours="vm.chartData.colours" options="vm.chartData.options" labels="vm.chartData.labels"></canvas>'+
                     '</div>'+
-                    '<div class="ssp-quiz-results-explain" data-ng-bind-html="::vm.explaintext"></div>'+
+                    '<div class="ssp-quiz-results-explain text-center" data-ng-bind-html="::vm.explaintext"></div>'+
                     '<div class="ssq-quiz-results-question-message" data-ng-repeat="message in vm.chartData.messages">'+
                         '<h4><ins data-ng-bind-html="::message.name"></ins></h4>'+
                         '<p data-ng-bind-html="::message.text"></p>'+
                     '</div>' +
+                    '<div class="ssp-quiz-results-buttons text-center">' +
+                        '<a class="btn btn-primary">Refaire le test</a>' +
+                    '</div>'+
                 '</div>'+
             '</div>';
 
