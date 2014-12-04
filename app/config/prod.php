@@ -29,7 +29,7 @@ $app['routes'] = $app->extend('routes', function (RouteCollection $routes, Appli
     $loader     = new YamlFileLoader(new FileLocator(__DIR__ . '/routing'));
     $collection = $loader->load('routes.yml');
     $routes->addCollection($collection);
- 
+
     return $routes;
 });
 

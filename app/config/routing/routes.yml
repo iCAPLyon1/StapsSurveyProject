@@ -3,11 +3,5 @@ index:
   defaults: { _controller: 'StapsSurvey\Controller\AppController::indexAction' }
 
 quiz:
-  path: /quiz/{page}
-  defaults: { _controller: 'StapsSurvey\Controller\AppController::quizAction', page: 1 }
-  requirements:
-    page: \d+
-
-results:
-  path: /results
-  defaults: {_controller: 'StapsSurvey\Controller\AppController::resultsAction'}
+  path: /quiz
+  defaults: { _controller: 'StapsSurvey\Controller\AppController::quizAction'}

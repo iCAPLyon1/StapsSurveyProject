@@ -1,6 +1,7 @@
 /composer.lock
 /vendor/
 /web/assets/*
+/web/app/*
 /app/cache/*
 /app/log/*
 .idea/

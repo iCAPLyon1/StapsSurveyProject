@@ -12,7 +12,7 @@ class AppController extends AbstractController
 		return $this->app['twig']->render('index.html.twig');
 	}
 	
-	public function quizAction($page)
+	public function quizAction()
     {
         $quiz = null;
         $quizPath = __DIR__.'/../Model/quiz.xml';
@@ -21,11 +21,6 @@ class AppController extends AbstractController
             $quiz = XML2Array::parse($quiz, array("filter", "result", "message"));
         }
 
-		return $this->app['twig']->render('page.html.twig',array('page'=>$page, 'quiz'=>$quiz));
+		return $this->app['twig']->render('page.html.twig',array('quiz'=>$quiz));
 	}
-
-    public function resultsAction()
-    {
-        return $this->app['twig']->render('results.html.twig');
-    }
 }
