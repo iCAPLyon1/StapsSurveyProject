@@ -36,7 +36,7 @@
                         <value>3</value>
                     </answer>
                 </subQuestion>
-                <subQuestion filter="a,b,c">
+                <subQuestion filter="a,b,c,e">
                     <id>2</id>
                     <title><![CDATA[Moyennes en SVT ou physique‐chimie en 1<sup>ère</sup>]]></title>
                     <answer>
@@ -76,7 +76,7 @@
                         <value>3</value>
                     </answer>
                 </subQuestion>
-                <subQuestion filter="a,b,c">
+                <subQuestion filter="a,b,c,e">
                     <id>4</id>
                     <title><![CDATA[Moyennes en SVT ou physique‐chimie au 1<sup>er</sup> trimestre en terminale]]></title>
                     <answer>
@@ -102,27 +102,27 @@
                 <title>Filières</title>
                 <option>
                     <value>a</value>
-                    <coefficient>1.2</coefficient>
+                    <coefficient>1</coefficient>
                     <title>Bac S</title>
                 </option>
                 <option>
                     <value>b</value>
-                    <coefficient>1</coefficient>
+                    <coefficient>0.9</coefficient>
                     <title>Bac ES ou L</title>
                 </option>
                 <option>
                     <value>c</value>
-                    <coefficient>0.9</coefficient>
-                    <title>Bac ST2S ou STI2D</title>
+                    <coefficient>0.8</coefficient>
+                    <title>Bac ST2, STI ou STL</title>
                 </option>
                 <option>
                     <value>d</value>
-                    <coefficient>0.8</coefficient>
-                    <title>Bac STMG</title>
+                    <coefficient>0.7</coefficient>
+                    <title>Bac STG ou STMG</title>
                 </option>
                 <option>
                     <value>e</value>
-                    <coefficient>0.7</coefficient>
+                    <coefficient>0.6</coefficient>
                     <title>Bac Pro</title>
                 </option>
             </filter>
@@ -263,7 +263,7 @@
                 </subQuestion>
                 <subQuestion>
                     <id>11</id>
-                    <title>Etes‐vous capable de travailler seul ?</title>
+                    <title>Etes‐vous capable de travailler seul(e) ?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -376,11 +376,11 @@
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement (UNSS)</title>
+                        <title>Régulièrement</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Régulièrement (Milieu Fédéral)</title>
+                        <title>Très souvent</title>
                         <value>3</value>
                     </answer>
                 </subQuestion>
@@ -637,7 +637,7 @@
                 <title>Pratiques d’activités physiques autres que votre spécialité</title>
                 <subQuestion>
                     <id>19</id>
-                    <title>Sport collectif (football…)</title>
+                    <title>Sport collectif (basket…)</title>
                     <answer>
                         <title>Jamais</title>
                         <value>0</value>
@@ -797,21 +797,21 @@
                 </subQuestion>
                 <subQuestion>
                     <id>27</id>
-                    <title>Note en EPS au baccalauréat</title>
+                    <title>Moyenne en 1ère en EPS</title>
                     <answer>
                         <title>Moins de 10</title>
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>De 10 à 12,5</title>
+                        <title>De 10,5 à 13,5</title>
                         <value>1</value>
                     </answer>
                     <answer>
-                        <title>De 12,5 à 15</title>
+                        <title>De 14 à 16,5</title>
                         <value>2</value>
                     </answer>
                     <answer>
-                        <title>Plus de 15</title>
+                        <title>Plus de 17</title>
                         <value>3</value>
                     </answer>
                 </subQuestion>
@@ -889,7 +889,7 @@
                 </subQuestion>
                 <subQuestion>
                     <id>31</id>
-                    <title>Avez‐vous pris de dispositions pour pallier vos points faibles ?</title>
+                    <title>Avez‐vous pris des dispositions pour pallier vos points faibles ?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -951,7 +951,7 @@
                 </subQuestion>
                 <subQuestion>
                     <id>34</id>
-                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Entraînement Sportif ?</title>
+                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Entraînement Sportif?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -971,7 +971,7 @@
                 </subQuestion>
                 <subQuestion>
                     <id>35</id>
-                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Management du Sport ?</title>
+                    <title>Vous êtes vous informés sur les objectifs et débouchés de la filière Management du Sport?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -1007,7 +1007,7 @@
                 <title>Expérience d’encadrement sportif</title>
                 <subQuestion>
                     <id>37</id>
-                    <title>Etes‐vous engagé dans une tâche d’animation sportive ?</title>
+                    <title>Etes‐vous engagé(e) dans une tâche d’animation sportive ?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -1059,7 +1059,7 @@
                 <title>Expériences d’encadrement autre que sportif</title>
                 <subQuestion>
                     <id>40</id>
-                    <title>Etes‐vous engagé dans une tâche d’animation autre que sportive ?</title>
+                    <title>Etes‐vous engagé(e) dans une tâche d’animation autre que sportive?</title>
                     <answer>
                         <title>Non</title>
                         <value>0</value>
@@ -1307,7 +1307,7 @@
                 <title>Capacité de travail</title>
                 <subQuestion>
                     <id>52</id>
-                    <title>Combien d’h par jour êtes‐vous capable de consacrer au travail scolaire en dehors des cours ?</title>
+                    <title>Combien d’heures par jour êtes‐vous capable de consacrer au travail scolaire en dehors des cours ?</title>
                     <answer>
                         <title>1h</title>
                         <value>0</value>
@@ -1387,7 +1387,7 @@
                 </subQuestion>
                 <subQuestion>
                     <id>56</id>
-                    <title>Avez‐vous besoin de récupérer longtemps après une pratique?</title>
+                    <title>Avez‐vous besoin de récupérer longtemps après une pratique sportive?</title>
                     <answer>
                         <title>Très</title>
                         <value>0</value>
@@ -1485,7 +1485,7 @@
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Je songe à m’y adonner</title>
+                        <title>Je pense à en faire</title>
                         <value>1</value>
                     </answer>
                     <answer>
@@ -1505,7 +1505,7 @@
                         <value>0</value>
                     </answer>
                     <answer>
-                        <title>Je songe à m’y adonner</title>
+                        <title>Je pense à en faire</title>
                         <value>1</value>
                     </answer>
                     <answer>
@@ -1592,7 +1592,7 @@
         <rule condition="&lt;0.5">
             <message max="2"><text>Actuellement, il apparait que vous ayez un certain potentiel à réussir en STAPS. Vos dispositions sont relativement équilibrées.</text></message>
             <message max="4"><text>Actuellement, il apparait que vous risquez de rencontrer certaines difficultés dans cette filière STAPS.</text></message>
-            <message max="6"><text>Actuellement, il apparait que vous risquez de rencontrer des difficultés importantes pour réussie dans cette filière STAPS.</text></message>
+            <message max="6"><text>Actuellement, il apparait que vous risquez de rencontrer des difficultés importantes pour réussir dans cette filière STAPS.</text></message>
         </rule>
     </result>
 

@@ -8,7 +8,7 @@
     function quizTemplate ($templateCache) {
         var tplHtml = ''+
             '<div class="ssp-quiz">'+
-                '<h3 data-ng-bind-html="::vm.quiz.title"></h3>'+
+                '<h3 class="sub-quiz-title" data-ng-bind-html="::vm.quiz.title"></h3>'+
                 '<ssp-question question="question" data-ng-repeat="question in vm.quiz.questions" options="vm.options"></ssp-question>'+
                 '<div class="ssp-quiz-pagination">'+
                     '<a class="btn btn-default" href="#/{{vm.quiz.page-1}}" data-ng-class="{\'disabled\':vm.quiz.page<=1}"><i class="fa fa-angle-left"></i> Précédent</a>'+

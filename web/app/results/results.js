@@ -57,14 +57,6 @@
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(200,200,200,0.8)"
             },
-            { // green
-                fillColor: "transparent",
-                strokeColor: "rgba(67, 172, 106, 1)",
-                pointColor: "rgba(67, 172, 106, 1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(67, 172, 106,0.8)"
-            },
             { // blue
                 fillColor: "rgba(0,140,186,0.2)",
                 strokeColor: "rgba(0,140,186,1)",
@@ -105,7 +97,7 @@
             var questions = vm.questions;
 
             //Calculate scores for radar graph and messages
-            var data = [], scores = [], labels = [], meanvalues = [], messages = [];
+            var data = [], scores = [], labels = [], messages = [];
             for (var i = 0; i < questions.length; i++) {
                 var question = questions[i];
                 var questionScore = 0;
@@ -138,11 +130,11 @@
                 //Push results to arrays
                 labels.push(question.id.toUpperCase());
                 data.push(1);
-                meanvalues.push(0.5);
+                //meanvalues.push(0.5);
                 scores.push(questionScore);
             }
             vm.chartData.labels = labels;
-            vm.chartData.data = [data, meanvalues, scores];
+            vm.chartData.data = [data, scores];
             vm.chartData.messages = messages;
 
             //Show score messages depending on scores
@@ -227,7 +219,7 @@
 
     function resultsTemplate ($templateCache) {
         var tplHtml = ''+
-            '<h3>{{::vm.title}}</h3>'+
+            '<h3 class="sub-quiz-title">{{::vm.title}}</h3>'+
             '<div class="ssp-quiz-results panel panel-default">'+
                 '<div class="panel-heading"><h3 class="ssp-quiz-results-title panel-title" data-ng-bind-html="::vm.paneltitle"></h3></div>'+
                 '<div class="ssp-quiz-results-body panel-body">' +

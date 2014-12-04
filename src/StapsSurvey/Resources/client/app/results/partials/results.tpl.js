@@ -7,7 +7,7 @@
 
     function resultsTemplate ($templateCache) {
         var tplHtml = ''+
-            '<h3>{{::vm.title}}</h3>'+
+            '<h3 class="sub-quiz-title">{{::vm.title}}</h3>'+
             '<div class="ssp-quiz-results panel panel-default">'+
                 '<div class="panel-heading"><h3 class="ssp-quiz-results-title panel-title" data-ng-bind-html="::vm.paneltitle"></h3></div>'+
                 '<div class="ssp-quiz-results-body panel-body">' +

@@ -134,10 +134,10 @@
 
                     var currentPage = current?current.page:0;
                     var nextPage = next.page;
-                    if (nextPage>1 && routesVisited.indexOf(nextPage-1)==-1) {
+                    /*if (nextPage>1 && routesVisited.indexOf(nextPage-1)==-1) {
                         var routesVisitedCount = routesVisited.length;
                         $location.path('/'+((routesVisitedCount>0)?routesVisited[routesVisitedCount-1]:1));
-                    }
+                    }*/
                     $rootScope.isDownwards = nextPage<=currentPage;
                 }
             );
