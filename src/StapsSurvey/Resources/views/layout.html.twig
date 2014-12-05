@@ -38,6 +38,9 @@
         {% image debug=false output='/assets/fonts/fontawesome-webfont.woff'
         '../bower_components/font-awesome/fonts/fontawesome-webfont.woff' %}
         {% endimage %}
+        {% image debug=false output='/assets/images/banner_big.png'
+        '../src/StapsSurvey/Resources/client/images/banner_big.png' %}
+        {% endimage %}
     {% endblock %}
 
     {% block javascripts_header %}
@@ -51,14 +54,14 @@
 </head>
 <body>
     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-    <div class="container">
-        <header>
-            <div class="header-container">
-                <div class="header center-block">
-                    <img alt="Logo UFRSTAPS : Unité de Formation et de Recherche en Sciences et Techniques des Activités Physiques et Sportives - Université Lyon 1" id="logo" src="http://ufr-staps.univ-lyon1.fr/images/logo_lyon1.gif">
-                </div>
+    <header>
+        <div class="header-container">
+            <div class="header center-block">
+                <img alt="Logo UFRSTAPS : Unité de Formation et de Recherche en Sciences et Techniques des Activités Physiques et Sportives - Université Lyon 1" id="logo" src="http://ufr-staps.univ-lyon1.fr/images/logo_lyon1.gif">
             </div>
-        </header>
+        </div>
+    </header>
+    <div class="container">
         <div id="main" role="main">
             {% set alertTypeAvaillable = [ 'info', 'success', 'warning', 'error'] %}
             {% for alert in alertTypeAvaillable %}

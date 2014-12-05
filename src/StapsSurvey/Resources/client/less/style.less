@@ -2,25 +2,28 @@ html, body{
   min-height: 100%;
 }
 body {
-  background: url("http://ufr-staps.univ-lyon1.fr/images/STAPS/bg.png") repeat-x scroll 0 0 #fff;
+  background: #EFEFEF;
 }
 
 div.header-container{
   height: 165px;
   overflow: hidden;
   width: 100%;
-  background: rgb(96,9,18); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(96,9,18,1) 0%, rgba(180,10,43,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(96,9,18,1)), color-stop(100%,rgba(180,10,43,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(96,9,18,1) 0%,rgba(180,10,43,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(96,9,18,1) 0%,rgba(180,10,43,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(96,9,18,1) 0%,rgba(180,10,43,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(96,9,18,1) 0%,rgba(180,10,43,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#600912', endColorstr='#b40a2b',GradientType=0 ); /* IE6-9 */
+  background: #902223; /* Old browsers */
+  background: -moz-linear-gradient(top,  #902223 0%, #a54b4c 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#902223), color-stop(100%,#a54b4c)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #902223 0%,#a54b4c 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #902223 0%,#a54b4c 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #902223 0%,#a54b4c 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #902223 0%,#a54b4c 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#902223', endColorstr='#a54b4c',GradientType=0 ); /* IE6-9 */
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow:    0px 2px 2px 0px rgba(0, 0, 0, 0.23);
+  box-shadow:         0px 2px 2px 0px rgba(0, 0, 0, 0.23);
   div.header{
-    width: 928px;
+    width: 100%;
     height: inherit;
-    background: url("http://ufr-staps.univ-lyon1.fr/medias/photo/20140227banierestaps_1394188971735-jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("/assets/images/banner_big.png") no-repeat center 0 rgba(0, 0, 0, 0);
   }
 }
 
@@ -38,7 +41,7 @@ div.home-page-panel {
 
   li {
     list-style-type: none;
-    color: white;
+    color: #333;
     text-transform: uppercase;
     font-size: 11px;
     float: left;
@@ -54,7 +57,7 @@ div.home-page-panel {
       display: block;
       font-size: 11px;
       color: #333;
-      background: white;
+      background: #ECD8D9;
       border-radius: 3px;
       margin: 0 auto 5px auto;
       transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
@@ -64,7 +67,7 @@ div.home-page-panel {
       content: '';
       width: 100%;
       height: 2px;
-      background: white;
+      background: #ECD8D9;
       position: absolute;
       left: -50%;
       top: 12px;
@@ -78,7 +81,7 @@ div.home-page-panel {
     }
 
     &.active:before,  &.active:after{
-      background: #ba0228;
+      background: #902223;
       color: white;
     }
   }
@@ -91,7 +94,7 @@ div.home-page-panel {
 }
 
 div.ssp-quiz-container {
-  h3.sub-quiz-title{margin-top:0; color: #fff;}
+  h3.sub-quiz-title{margin-top:0; color: #333;}
   div.ssp-quiz {
     div.ssp-question {
       div.ssp-question-section-subquestion{
