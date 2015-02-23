@@ -2,6 +2,7 @@
     'use strict';
     angular.module('blocks.router', [
         'ngRoute',
-        'underscore'
+        'underscore',
+        'ga'
     ]);
 })();

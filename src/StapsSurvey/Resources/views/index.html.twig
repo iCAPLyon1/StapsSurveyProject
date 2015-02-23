@@ -1,4 +1,5 @@
 {% extends 'layout.html.twig' %}
+{% block analytics_pageview %}ga('send', 'pageview');{% endblock %}
 {% block content %}
     <div class="home-page-panel panel panel-default">
         <div class="panel-body">

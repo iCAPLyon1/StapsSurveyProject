@@ -45,6 +45,12 @@
         <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
+    {% javascripts debug=false filter='jsmin' output='/assets/libs/angular-ga.min.js'
+    '../bower_components/angular-ga/ga.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
     {% javascripts debug=false output='/assets/libs/jspdf.min.js'
     '../bower_components/jspdf/dist/jspdf.min.js'
     %}

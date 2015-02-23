@@ -21,15 +21,6 @@
                     controller: 'Quiz',
                     controllerAs: 'vm'
                 }
-            },
-            {
-                url: '/',
-                config: {
-                    template: '<ssp-quiz quiz="vm.quiz"></ssp-quiz>',
-                    controller: 'Quiz',
-                    controllerAs: 'vm',
-                    page: 1
-                }
             }
         ];
     }

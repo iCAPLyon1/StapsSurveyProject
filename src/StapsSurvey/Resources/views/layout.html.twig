@@ -51,7 +51,8 @@
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
             ga('create', 'UA-57859899-1', 'auto');
-            ga('send', 'pageview');
+            {% block analytics_pageview %}
+            {% endblock %}
         </script>
         {% javascripts filter='jsmin' debug=false output='/assets/libs/modernizr.js'
         '../bower_components/modernizr/modernizr.js'

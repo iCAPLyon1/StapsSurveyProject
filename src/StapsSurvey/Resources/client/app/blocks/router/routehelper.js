@@ -5,7 +5,7 @@
         .provider('routehelperConfig', routehelperConfig)
         .factory('routehelper', routehelper);
 
-    routehelper.$inject = ['$location', '$rootScope', '$route', 'routehelperConfig', '_'];
+    routehelper.$inject = ['$location', '$rootScope', '$route', 'routehelperConfig', '_', 'ga'];
 
     // Must configure via the routehelperConfigProvider
     function routehelperConfig() {
@@ -23,7 +23,7 @@
         };
     }
 
-    function routehelper($location, $rootScope, $route, routehelperConfig, _) {
+    function routehelper($location, $rootScope, $route, routehelperConfig, _, ga) {
         var handlingRouteChangeError = false;
         var routeCounts = {
             errors: 0,
@@ -104,6 +104,7 @@
 
                     $rootScope.title = title; // data bind to <title>
                     $rootScope.page = current.page;
+                    ga('send', 'pageview', {title: 'Page '+current.page});
                 }
             );
         }
@@ -119,10 +120,9 @@
                     }
                     if (next.params.page) {
                         next.page = Math.max(1, parseInt(next.params.page));
-                    } else if (next.page) {
-                        next.params.page = next.page;
-                    } else {
-                        next.params.page = next.page = 1;
+                    } else if (!next.page) {
+                        next.page = 1;
+                        //next.params.page = next.page;
                     }
 
                     var currentPage = current?current.page:0;

@@ -26,7 +26,7 @@
                         '<p data-ng-bind-html="::message.text"></p>'+
                     '</div>' +
                     '<div class="ssp-quiz-results-buttons text-center">' +
-                        '<a class="btn btn-primary" href="quiz">Refaire le test</a>' +
+                        '<a class="btn btn-primary" href="/quiz">Refaire le test</a>' +
                     '</div>'+
                 '</div>'+
             '</div>';
